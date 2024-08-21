@@ -1,0 +1,128 @@
+[
+  {
+    "title": "В каком стандарте описана технология канального уровня проводного Ethernet?",
+    "answers": [
+      {
+        "value": "IEEE 208",
+        "correct": "false"
+      },
+      {
+        "value": "IEEE 802.11n",
+        "correct": "false"
+      },
+      {
+        "value": "IEEE 802.3",
+        "correct": "true"
+      },
+      {
+        "value": "IEEE 803.2",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "CSMA/CD это?",
+    "answers": [
+      {
+        "value": "Carrier Sense Multiple Access with Collision Detection",
+        "correct": "true"
+      },
+      {
+        "value": "Collision Sense Multiple Access with Carrier Detection",
+        "correct": "false"
+      },
+      {
+        "value": "Современный стандарт CD дисков",
+        "correct": "false"
+      },
+      {
+        "value": "Современный стандарт CSMA дисков",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Рабочее название технологии канального уровня Ethernet это",
+    "answers": [
+      {
+        "value": "Ethereum",
+        "correct": "false"
+      },
+      {
+        "value": "IEEE",
+        "correct": "false"
+      },
+      {
+        "value": "CSMA/CD",
+        "correct": "true"
+      },
+      {
+        "value": "Wi-FI",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Технология беспроводного Ethernet (Wi-Fi) описана в стандарте",
+    "answers": [
+      {
+        "value": "RFC 802.3",
+        "correct": "false"
+      },
+      {
+        "value": "IEEE 791",
+        "correct": "false"
+      },
+      {
+        "value": "Wi-FI",
+        "correct": "false"
+      },
+      {
+        "value": "IEEE 802.11",
+        "correct": "true"
+      }
+    ]
+  },
+  {
+    "title": "Обжатым называют сетевой кабель, который",
+    "answers": [
+      {
+        "value": "Сильно сжат при монтаже",
+        "correct": "false"
+      },
+      {
+        "value": "Имеет установленные (обжатые) разъемы",
+        "correct": "true"
+      },
+      {
+        "value": "Очищен от изоляции",
+        "correct": "false"
+      },
+      {
+        "value": "Прижат к стене с помощью крепежных скоб",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Технологии канального уровня в рамках модели OSI располагаются на",
+    "answers": [
+      {
+        "value": "Физическом уровне",
+        "correct": "false"
+      },
+      {
+        "value": "Канальном уровне",
+        "correct": "false"
+      },
+      {
+        "value": "На физическом и канальном уровне",
+        "correct": "true"
+      },
+      {
+        "value": "На канальном и сетевом уровне",
+        "correct": "false"
+      }
+    ]
+  }
+]
