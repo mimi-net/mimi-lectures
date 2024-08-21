@@ -1,5 +1,47 @@
 [
   {
+    "title": "RFC расшифровываются как",
+    "answers": [
+      {
+        "value": "Routing From Computer",
+        "correct": "false"
+      },
+      {
+        "value": "Request for Comments",
+        "correct": "true"
+      },
+      {
+        "value": "Result For Connection",
+        "correct": "false"
+      },
+      {
+        "value": "Room For Candy",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "RFC описывают",
+    "answers": [
+      {
+        "value": "Протоколы",
+        "correct": "true"
+      },
+      {
+        "value": "Технологии канального уровня и протоколы",
+        "correct": "false"
+      },
+      {
+        "value": "Технологии канального уровня",
+        "correct": "false"
+      },
+      {
+        "value": "Физический уровень модели OSI",
+        "correct": "false"
+      }
+    ]
+  },
+  {
     "title": "В каком стандарте описана технология канального уровня проводного Ethernet?",
     "answers": [
       {

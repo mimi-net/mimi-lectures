@@ -1,0 +1,128 @@
+[
+  {
+    "title": "Что такое MAC адрес",
+    "answers": [
+      {
+        "value": "адрес узла сети",
+        "correct": "false"
+      },
+      {
+        "value": "адрес сетевой карты, который считается относящимся к канальному уровню модели OSI",
+        "correct": "true"
+      },
+      {
+        "value": "это название команды в Windows и Linux",
+        "correct": "false"
+      },
+      {
+        "value": "адрес, который используется при маршрутизации сообщений между различными сетями",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Какой размер MAC адреса в Ethernet",
+    "answers": [
+      {
+        "value": "48 байт",
+        "correct": "false"
+      },
+      {
+        "value": "6 Килобит",
+        "correct": "false"
+      },
+      {
+        "value": "48 бит",
+        "correct": "true"
+      },
+      {
+        "value": "6 бит",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Максимальный размер Ethernet фрейма",
+    "answers": [
+      {
+        "value": "1480 байт",
+        "correct": "false"
+      },
+      {
+        "value": "53 байта",
+        "correct": "false"
+      },
+      {
+        "value": "1500 байт",
+        "correct": "false"
+      },
+      {
+        "value": "1514 байт",
+        "correct": "true"
+      }
+    ]
+  },
+  {
+    "title": "Если хост принял Ethernet пакет, но его контрольная сумма не совпадает с указанной, то хост",
+    "answers": [
+      {
+        "value": "отбрасывает такой пакет",
+        "correct": "true"
+      },
+      {
+        "value": "Отбрасывает пакет и уведомляет об этом отправителя",
+        "correct": "false"
+      },
+      {
+        "value": "Продолжает обрабатывать пакет с пометкой, что контрольная сумма не совпадает",
+        "correct": "false"
+      },
+      {
+        "value": "продолжает обрабатывать пакет и уведомляет отправителя, что контрольная сумма в последнем пакете не совпала",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Какой командой под ОС Windows можно посмотреть свой текущий MAC адрес",
+    "answers": [
+      {
+        "value": "macconfig",
+        "correct": "false"
+      },
+      {
+        "value": "ifconfig",
+        "correct": "false"
+      },
+      {
+        "value": "ipconfig /all",
+        "correct": "true"
+      },
+      {
+        "value": "ifconfig /all",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Как выглядит широковещательный MAC адрес",
+    "answers": [
+      {
+        "value": "Начинается с 01:00:5E",
+        "correct": "false"
+      },
+      {
+        "value": "FF:FF:FF:FF:FF:FF",
+        "correct": "true"
+      },
+      {
+        "value": "DE:AD:BA:BE:BE:EF",
+        "correct": "false"
+      },
+      {
+        "value": "00:00:00:00:00:00",
+        "correct": "false"
+      }
+    ]
+  }
+]
