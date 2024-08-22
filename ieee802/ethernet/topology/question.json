@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Какая сетевая топология наиболее популярна в настоящее время для построения Ethernet-сетей?",
+    "answers": [
+      {
+        "value": "Кольцо",
+        "correct": "false"
+      },
+      {
+        "value": "Общая шина",
+        "correct": "false"
+      },
+      {
+        "value": "Звезда",
+        "correct": "true"
+      },
+      {
+        "value": "Ячеистая топология",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Какую топологию создает домашний Wi-Fi роутер?",
+    "answers": [
+      {
+        "value": "Кольцо",
+        "correct": "false"
+      },
+      {
+        "value": "Общая шина",
+        "correct": "false"
+      },
+      {
+        "value": "Звезда",
+        "correct": "true"
+      },
+      {
+        "value": "Ячеистая топология",
+        "correct": "false"
+      }
+    ]
+  }
+]
