@@ -1,0 +1,128 @@
+[
+  {
+    "title": "В каком документе описан ARP протокол",
+    "answers": [
+      {
+        "value": "IEEE ARP",
+        "correct": "false"
+      },
+      {
+        "value": "RFC 791",
+        "correct": "false"
+      },
+      {
+        "value": "RFC 826",
+        "correct": "true"
+      },
+      {
+        "value": "RFC 1",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Зачем нужен ARP протокол?",
+    "answers": [
+      {
+        "value": "Узнать MAC адрес хоста по его IP адресу",
+        "correct": "true"
+      },
+      {
+        "value": "Узнать MAC адрес хоста по его имени",
+        "correct": "false"
+      },
+      {
+        "value": "Узнать MAC адрес хоста по его типу (ПК, ноутбук, телефон)",
+        "correct": "false"
+      },
+      {
+        "value": "Узнать, есть ли такой хост в сети",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "В ARP запросе на канальном уровне в качестве адреса назначения устанавливается",
+    "answers": [
+      {
+        "value": "IP адрес искомого хоста",
+        "correct": "false"
+      },
+      {
+        "value": "Широковещательный IP адрес (255.255.255.255)",
+        "correct": "false"
+      },
+      {
+        "value": "MAC адрес искомого хоста",
+        "correct": "false"
+      },
+      {
+        "value": "Широковещательный MAC адрес (FF:FF:FF:FF:FF:FF)",
+        "correct": "true"
+      }
+    ]
+  },
+  {
+    "title": "Если на первый ARP запрос никто не ответил, то хост",
+    "answers": [
+      {
+        "value": "Делает еще несколько попыток, отправляет ARP запрос",
+        "correct": "true"
+      },
+      {
+        "value": "Отправляет IP пакет на широковещательный MAC адрес",
+        "correct": "false"
+      },
+      {
+        "value": "Выбрасывает пакет, который не смог отправить",
+        "correct": "false"
+      },
+      {
+        "value": "Ждет, пока искомый хост не появится в сети",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Какой командой под ОС Windows можно посмотреть arp кэш",
+    "answers": [
+      {
+        "value": "ipconfig",
+        "correct": "false"
+      },
+      {
+        "value": "ifconfig",
+        "correct": "false"
+      },
+      {
+        "value": "arp",
+        "correct": "true"
+      },
+      {
+        "value": "arp-cache",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Когда ОС устанавливает себе на сетевой интерфейс IP адрес, она обычно",
+    "answers": [
+      {
+        "value": "Сообщает пользователю, что все ОК",
+        "correct": "false"
+      },
+      {
+        "value": "Отправляет ICMP пакет на маршрутизатор, чтобы проверить, что он доступен и работает",
+        "correct": "false"
+      },
+      {
+        "value": "Отправляет ICMP запрос сама себе, чтобы проверить, что все работает",
+        "correct": "false"
+      },
+      {
+        "value": "Отправляет в сеть беспричинный ARP запрос",
+        "correct": "true"
+      }
+    ]
+  }
+]
