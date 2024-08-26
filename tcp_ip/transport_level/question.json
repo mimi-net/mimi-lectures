@@ -1,0 +1,149 @@
+[
+  {
+    "title": "Что используется для адресации на транспортном уровне модели OSI",
+    "answers": [
+      {
+        "value": "IPv6 адреса",
+        "correct": "false"
+      },
+      {
+        "value": "Порты",
+        "correct": "true"
+      },
+      {
+        "value": "Имена приложений",
+        "correct": "false"
+      },
+      {
+        "value": "Связка IP адреса и имени приложений",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Какие протоколы стека TCP/IP работают на транспортном уровне",
+    "answers": [
+      {
+        "value": "TCP и IP",
+        "correct": "false"
+      },
+      {
+        "value": "TCP",
+        "correct": "false"
+      },
+      {
+        "value": "IP и ARP",
+        "correct": "false"
+      },
+      {
+        "value": "TCP и UDP",
+        "correct": "true"
+      }
+    ]
+  },
+  {
+    "title": "Сколько всего портов у TCP или UDP",
+    "answers": [
+      {
+        "value": "256",
+        "correct": "false"
+      },
+      {
+        "value": "1024",
+        "correct": "false"
+      },
+      {
+        "value": "8196",
+        "correct": "false"
+      },
+      {
+        "value": "65536",
+        "correct": "true"
+      }
+    ]
+  },
+  {
+    "title": "Номера каких портов являются привилегированными и для их открытия необходимы права администратора или суперпользователя",
+    "answers": [
+      {
+        "value": "0-255",
+        "correct": "false"
+      },
+      {
+        "value": "0-1023",
+        "correct": "true"
+      },
+      {
+        "value": "0-8196",
+        "correct": "false"
+      },
+      {
+        "value": "0-32768",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Может ли одно приложение открыть несколько TCP/UDP портов",
+    "answers": [
+      {
+        "value": "Да",
+        "correct": "true"
+      },
+      {
+        "value": "Нет",
+        "correct": "false"
+      },
+      {
+        "value": "Да, если запущено от администратора или суперпользователя",
+        "correct": "false"
+      },
+      {
+        "value": "Нет, есть правило - одно приложение - один порт",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Может ли несколько разных приложений открыть один TCP/UDP порт",
+    "answers": [
+      {
+        "value": "Да",
+        "correct": "false"
+      },
+      {
+        "value": "Нет",
+        "correct": "true"
+      },
+      {
+        "value": "Да, если запущено от администратора или суперпользователя",
+        "correct": "false"
+      },
+      {
+        "value": "Да, если эти порты выше 1024",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Какой утилитой можно посмотреть открытые порты под ОС Windows",
+    "answers": [
+      {
+        "value": "ipconfig",
+        "correct": "false"
+      },
+      {
+        "value": "netstat",
+        "correct": "true"
+      },
+      {
+        "value": "route",
+        "correct": "false"
+      },
+      {
+        "value": "ifconfig",
+        "correct": "false"
+      }
+    ]
+  }
+]

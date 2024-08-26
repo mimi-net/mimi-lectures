@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Чем UDP отличается от TCP",
+    "answers": [
+      {
+        "value": "Только названием",
+        "correct": "false"
+      },
+      {
+        "value": "UDP не гарантирует доставку данных, а TCP обеспечивает надежность доставки данных",
+        "correct": "true"
+      },
+      {
+        "value": "UDP улучшенная версия TCP",
+        "correct": "false"
+      },
+      {
+        "value": "UDP - это TCP для IPv6",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Длина UDP заголовка",
+    "answers": [
+      {
+        "value": "8 байт",
+        "correct": "true"
+      },
+      {
+        "value": "16 байт",
+        "correct": "false"
+      },
+      {
+        "value": "20 байт",
+        "correct": "false"
+      },
+      {
+        "value": "8 бит",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Какой протокол транспортного уровня лучше подходит для передачи данных в реальном времени",
+    "answers": [
+      {
+        "value": "UDP",
+        "correct": "true"
+      },
+      {
+        "value": "TCP",
+        "correct": "false"
+      },
+      {
+        "value": "ARP",
+        "correct": "false"
+      },
+      {
+        "value": "Ethernet",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Каким протоколом транспортного уровня вы воспользуетесь для групповой рассылке",
+    "answers": [
+      {
+        "value": "UDP",
+        "correct": "true"
+      },
+      {
+        "value": "TCP",
+        "correct": "false"
+      },
+      {
+        "value": "NTP",
+        "correct": "false"
+      },
+      {
+        "value": "ICMP",
+        "correct": "false"
+      }
+    ]
+  }
+]

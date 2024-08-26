@@ -1,0 +1,86 @@
+[
+  {
+    "title": "В каком году впервые был описан TCP протокол",
+    "answers": [
+      {
+        "value": "1945",
+        "correct": "false"
+      },
+      {
+        "value": "1969",
+        "correct": "false"
+      },
+      {
+        "value": "1981",
+        "correct": "true"
+      },
+      {
+        "value": "1991",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Длина TCP заголовка без опций",
+    "answers": [
+      {
+        "value": "8 байт",
+        "correct": "false"
+      },
+      {
+        "value": "16 байт",
+        "correct": "false"
+      },
+      {
+        "value": "20 байт",
+        "correct": "true"
+      },
+      {
+        "value": "32 байта",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Сколько пакетов нужно отправить друг другу двум хостам, чтобы установить TCP соединение",
+    "answers": [
+      {
+        "value": "1",
+        "correct": "false"
+      },
+      {
+        "value": "2",
+        "correct": "false"
+      },
+      {
+        "value": "3",
+        "correct": "true"
+      },
+      {
+        "value": "4",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "При попытке установить соединение на закрытый TCP порт придет пакет с флагом",
+    "answers": [
+      {
+        "value": "SYN+ACK",
+        "correct": "false"
+      },
+      {
+        "value": "SYN+RST",
+        "correct": "false"
+      },
+      {
+        "value": "RST",
+        "correct": "true"
+      },
+      {
+        "value": "FIN",
+        "correct": "false"
+      }
+    ]
+  }
+]

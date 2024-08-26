@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Что такое NAT",
+    "answers": [
+      {
+        "value": "North Atlantic Tracks - маршруты для полетов из Северной Америки в Европу и обратно",
+        "correct": "false"
+      },
+      {
+        "value": "Сокращение от Natali",
+        "correct": "false"
+      },
+      {
+        "value": "Network Address Translation - преобразование сетевых адресов",
+        "correct": "true"
+      },
+      {
+        "value": "Network Allocation Table - таблица выделения сетей",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Как из перечисленных сетей не относится к серой",
+    "answers": [
+      {
+        "value": "10.0.0.0/8",
+        "correct": "false"
+      },
+      {
+        "value": "192.168.1.0/24",
+        "correct": "false"
+      },
+      {
+        "value": "172.16.0.0/12",
+        "correct": "false"
+      },
+      {
+        "value": "172.0.0.0/8",
+        "correct": "true"
+      }
+    ]
+  },
+  {
+    "title": "Сколько раз можно изменить IP адрес в пакете, на пути его следования",
+    "answers": [
+      {
+        "value": "Не более 1",
+        "correct": "false"
+      },
+      {
+        "value": "Не более 3",
+        "correct": "false"
+      },
+      {
+        "value": "Не более 2 в степени 32 (количество IP адресов)",
+        "correct": "false"
+      },
+      {
+        "value": "Неограниченное число раз",
+        "correct": "true"
+      }
+    ]
+  },
+  {
+    "title": "Что остается неизменным, когда пакет проходит через NAT?",
+    "answers": [
+      {
+        "value": "IP адрес источника",
+        "correct": "false"
+      },
+      {
+        "value": "IP адрес назначения",
+        "correct": "true"
+      },
+      {
+        "value": "Порт источника",
+        "correct": "false"
+      },
+      {
+        "value": "Поле ID в IP заголовке",
+        "correct": "false"
+      }
+    ]
+  }
+]
