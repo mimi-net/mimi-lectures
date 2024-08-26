@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Для чего используется ICMP протокол",
+    "answers": [
+      {
+        "value": "Определение доступности хоста",
+        "correct": "false"
+      },
+      {
+        "value": "Определение обрыва соединения",
+        "correct": "false"
+      },
+      {
+        "value": "Диагностика сети, определение некоторых ошибок на сетевом и транспортном уровне",
+        "correct": "true"
+      },
+      {
+        "value": "Диагностика хоста, определение некоторых ошибок на уровне приложения",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "В каком документе описан ICMP протокол?",
+    "answers": [
+      {
+        "value": "IEEE 792",
+        "correct": "false"
+      },
+      {
+        "value": "RFC 792",
+        "correct": "true"
+      },
+      {
+        "value": "IEEE 802.3",
+        "correct": "false"
+      },
+      {
+        "value": "RFC 802.3",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "В какой протокол инкапсулируется (вкладывается) ICMP?",
+    "answers": [
+      {
+        "value": "UDP",
+        "correct": "false"
+      },
+      {
+        "value": "TCP",
+        "correct": "false"
+      },
+      {
+        "value": "ARP",
+        "correct": "false"
+      },
+      {
+        "value": "IP",
+        "correct": "true"
+      }
+    ]
+  }
+]

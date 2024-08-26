@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Что из ниже перечисленных не относится к ICMP сообщению?",
+    "answers": [
+      {
+        "value": "ICMP echo-request (эхо запрос)",
+        "correct": "false"
+      },
+      {
+        "value": "ICMP host unreachable",
+        "correct": "false"
+      },
+      {
+        "value": "ICMP time to live exceeded",
+        "correct": "false"
+      },
+      {
+        "value": "ICMP MAC address unreachable",
+        "correct": "true"
+      }
+    ]
+  }
+]
