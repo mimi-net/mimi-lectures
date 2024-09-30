@@ -1,0 +1,141 @@
+[
+  {
+    "title": "Может ли протокол IP быть инкапсулирован в IP ?",
+    "answers": [
+      {
+        "value": "Да",
+        "correct": "true"
+      },
+      {
+        "value": "Нет",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Какие протоколы можно инкапсулировать в IPIP туннель?",
+    "answers": [
+      {
+        "value": "Только IPv4.",
+        "correct": "true"
+      },
+      {
+        "value": "IPv4 и IPv6.",
+        "correct": "false"
+      },
+      {
+        "value": "Только протоколы из стека TCP/IP",
+        "correct": "false"
+      },
+      {
+        "value": "Любые",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Будет ли модифицирован IP заголовок при использовании IPIP туннеля?",
+    "answers": [
+      {
+        "value": "Да",
+        "correct": "false"
+      },
+      {
+        "value": "Нет",
+        "correct": "true"
+      },
+      {
+        "value": "Да, при условии, что внутри будет лежать IPv6",
+        "correct": "false"
+      },
+      {
+        "value": "Да, при условии, что IP адрес назначения будет серым",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Зачем нужен GRE, если IPIP?",
+    "answers": [
+      {
+        "value": "GRE обеспечивает безопасный режим передачи",
+        "correct": "false"
+      },
+      {
+        "value": "GRE может инкапсулировать не только IPv4",
+        "correct": "true"
+      },
+      {
+        "value": "GRE обеспечивает аутентификацию пользователей",
+        "correct": "false"
+      },
+      {
+        "value": "GRE разработан компанией CISCO",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Где располагается GRE заголовок?",
+    "answers": [
+      {
+        "value": "Сразу после Ethernet заголовка.",
+        "correct": "false"
+      },
+      {
+        "value": "Между новым и оригинальным IP заголовком.",
+        "correct": "true"
+      },
+      {
+        "value": "Между IP и TCP/UDP заголовком.",
+        "correct": "false"
+      },
+      {
+        "value": "Сразу после TCP/UDP заголовка.",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Если мой хост спрятан за NAT, какой туннель я могу использовать?",
+    "answers": [
+      {
+        "value": "IPIP",
+        "correct": "false"
+      },
+      {
+        "value": "GRE",
+        "correct": "false"
+      },
+      {
+        "value": "PPTP",
+        "correct": "false"
+      },
+      {
+        "value": "L2PT",
+        "correct": "true"
+      }
+    ]
+  },
+  {
+    "title": "PPTP создает:",
+    "answers": [
+      {
+        "value": "IPIP туннель",
+        "correct": "false"
+      },
+      {
+        "value": "GRE туннель",
+        "correct": "true"
+      },
+      {
+        "value": "IPsec туннель",
+        "correct": "false"
+      },
+      {
+        "value": "OpenVPN туннель",
+        "correct": "false"
+      }
+    ]
+  }
+]
