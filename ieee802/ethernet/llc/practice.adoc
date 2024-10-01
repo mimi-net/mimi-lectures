@@ -10,7 +10,7 @@
 У вас должен получиться экран похожий на мой
 
 .Смотрим Ethernet кадр в Wireshark.
-image::{docdir}/images/wireshark.png[Смотрим Ethernet кадр в Wireshark.]
+image::images/wireshark.png[Смотрим Ethernet кадр в Wireshark.]
 
 Вся рабочая область Wireshark разбита на 3 части.
 
@@ -27,6 +27,6 @@ image::{docdir}/images/wireshark.png[Смотрим Ethernet кадр в Wiresha
 В правом нижнем поле отображается шестнадцатеричное представление пакета. Так называемый hex-dump. Когда вы выделяете поле на левом экране, то нужный байт, которые соответствуют этому полю, подсвечиваются в правом поле.
 
 .Wireshark подсвечивает байты при выборе поля.
-image::{docdir}/images/wireshark_hex.png[Wireshark подсвечивает байты при выборе поля.]
+image::images/wireshark_hex.png[Wireshark подсвечивает байты при выборе поля.]
 
 На рисунке я выбрал поле Source (Адрес источника), его размер 6 байт и Wireshark мне подсветил эти 6 байт в правом поле.

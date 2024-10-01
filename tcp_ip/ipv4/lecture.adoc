@@ -3,7 +3,7 @@
 На сетевом уровне работает протокол IP (Internet protocol), который описан в https://datatracker.ietf.org/doc/html/rfc791[RFC 791]. IP протокол был придуман в далеком 1981 году, является частью стека протоколов TCP/IP и ответственный за доставку данных от одного хоста к другому. А IP адреса это только часть протокола. На рисунке ниже можно увидеть заголовок IP пакета. Source Address и Destination Address - это IP адреса.
 
 .Заголовок IP пакета из RFC 791 (https://datatracker.ietf.org/doc/html/rfc791).
-image::{docdir}/images/ip_header.png[Заголовок IP пакета из RFC 791 (https://datatracker.ietf.org/doc/html/rfc791).]
+image::images/ip_header.png[Заголовок IP пакета из RFC 791 (https://datatracker.ietf.org/doc/html/rfc791).]
 
 Разберем некоторые поля из IP заголовка.
 
@@ -16,7 +16,7 @@ image::{docdir}/images/ip_header.png[Заголовок IP пакета из RFC
 Это поле указывает на версию IP протокола. Когда внутри Ethernet пакета передается IPv4, то в поле тип/длина указывается 0x0800, как на рисунке ниже.
 
 .Внутри Ethernet кадра передается IPv4.
-image::{docdir}/images/ethernet_header.png[Внутри Ethernet кадра передается IPv4.]
+image::images/ethernet_header.png[Внутри Ethernet кадра передается IPv4.]
 
 А если бы мы передавали IPv6, то в поле тип/длина было бы 0x08DD. Таким образом, еще в заголовке Ethernet кадра мы можем понять, какой тип IP протокола лежит внутри и смотреть на поле Version в заголовке IP нет особого смысла.
 
@@ -27,7 +27,7 @@ image::{docdir}/images/ethernet_header.png[Внутри Ethernet кадра пе
 Сделаем сеть как показано на рисунке ниже.
 
 .Кольцо из 3-х маршрутизаторов. (https://miminet.ru/web_network?guid=7509b963-d190-4aad-8d90-9be42f302bbb)
-image::{docdir}/images/3_routers.png[Кольцо из 3-х маршрутизаторов. (https://miminet.ru/web_network?guid=7509b963-d190-4aad-8d90-9be42f302bbb)]
+image::images/3_routers.png[Кольцо из 3-х маршрутизаторов. (https://miminet.ru/web_network?guid=7509b963-d190-4aad-8d90-9be42f302bbb)]
 
 Нам понадобится 1 хост и 3 маршрутизатора:
 
@@ -66,7 +66,7 @@ image::{docdir}/images/3_routers.png[Кольцо из 3-х маршрутиза
 Фрагментация выглядит как на рисунке ниже.
 
 .Фрагментация IP пакета.
-image::{docdir}/images/ip_fragment.png[Фрагментация IP пакета.]
+image::images/ip_fragment.png[Фрагментация IP пакета.]
 
 Алгоритм следующий:
 

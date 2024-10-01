@@ -5,7 +5,7 @@
 Default free Zone (DFZ) - это такой набор маршрутизаторов, которые вместе содержат все маршруты до всех сетей. Давайте построим сеть, как показано на рисунке ниже.
 
 .Маршрута по умолчанию недостаточно. (https://miminet.ru/web_network?guid=bcbdb588-21a0-4c28-b84f-f03edf06ae29).
-image::{docdir}/images/dfz.png[Маршрута по умолчанию недостаточно. (https://miminet.ru/web_network?guid=bcbdb588-21a0-4c28-b84f-f03edf06ae29)]
+image::images/dfz.png[Маршрута по умолчанию недостаточно. (https://miminet.ru/web_network?guid=bcbdb588-21a0-4c28-b84f-f03edf06ae29)]
 
 Нам понадобится 2 хоста и 3 маршрутизатора:
 
@@ -26,7 +26,7 @@ image::{docdir}/images/dfz.png[Маршрута по умолчанию недо
 А если мы на маршрутизаторе 2 сделаем маршрут по умолчанию на маршрутизатор 1, то картина будет обратной. От хоста 2 до хоста 1 пакеты будут доходить, а вот обратно нет.
 
 .Default Free Zone (https://miminet.ru/web_network?guid=8de49b2d-563c-4519-9119-41be6939dd7b).
-image::{docdir}/images/dfz2.png[Default Free Zone (https://miminet.ru/web_network?guid=8de49b2d-563c-4519-9119-41be6939dd7b).]
+image::images/dfz2.png[Default Free Zone (https://miminet.ru/web_network?guid=8de49b2d-563c-4519-9119-41be6939dd7b).]
 
 Чтобы такая сеть работала нам нужно:
 
