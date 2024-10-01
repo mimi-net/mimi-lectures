@@ -1,0 +1,128 @@
+[
+  {
+    "title": "В современных ОС размер MTU по умолчанию",
+    "answers": [
+      {
+        "value": "1472",
+        "correct": "false"
+      },
+      {
+        "value": "1514",
+        "correct": "false"
+      },
+      {
+        "value": "1500",
+        "correct": "true"
+      },
+      {
+        "value": "1600",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Какое максимальное количество байт можно разместить в одном TCP пакете без опций?",
+    "answers": [
+      {
+        "value": "1500",
+        "correct": "false"
+      },
+      {
+        "value": "1480",
+        "correct": "false"
+      },
+      {
+        "value": "1472",
+        "correct": "false"
+      },
+      {
+        "value": "1460",
+        "correct": "true"
+      }
+    ]
+  },
+  {
+    "title": "Какое утверждение верное?",
+    "answers": [
+      {
+        "value": "L2MTU > MTU > MSS",
+        "correct": "true"
+      },
+      {
+        "value": "L2MTU > MSS > MTU",
+        "correct": "false"
+      },
+      {
+        "value": "MSS > L2MTU > MSS",
+        "correct": "false"
+      },
+      {
+        "value": "MTU > L2MTU > MSS",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "На сколько байт увеличится пакет при использовании GRE туннеля?",
+    "answers": [
+      {
+        "value": "8",
+        "correct": "false"
+      },
+      {
+        "value": "4",
+        "correct": "true"
+      },
+      {
+        "value": "24",
+        "correct": "false"
+      },
+      {
+        "value": "36",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Какой из перечисленных параметров повлияет на максимальный размер пакета",
+    "answers": [
+      {
+        "value": "L2MTU",
+        "correct": "false"
+      },
+      {
+        "value": "MSS",
+        "correct": "true"
+      },
+      {
+        "value": "IP-адрес",
+        "correct": "false"
+      },
+      {
+        "value": "Флаг DF в IP заголовке",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Какое ICMP сообщение помогает адаптировать размер MTU",
+    "answers": [
+      {
+        "value": "Тип = 4, код = 3.",
+        "correct": "false"
+      },
+      {
+        "value": "Тип = 3, код = 4.",
+        "correct": "true"
+      },
+      {
+        "value": "Тип = 4, код = 4.",
+        "correct": "false"
+      },
+      {
+        "value": "Тип = 3, код = 3.",
+        "correct": "false"
+      }
+    ]
+  }
+]

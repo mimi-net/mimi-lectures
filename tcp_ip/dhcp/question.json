@@ -1,0 +1,212 @@
+[
+  {
+    "title": "DHCP расшифровывается как",
+    "answers": [
+      {
+        "value": "Протокол динамической конфигурации коммутаторов",
+        "correct": "false"
+      },
+      {
+        "value": "Протокол статической конфигурации хостов",
+        "correct": "false"
+      },
+      {
+        "value": "Протокол динамической конфигурации хостов",
+        "correct": "true"
+      },
+      {
+        "value": "Протокол загрузки хостов",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "По какой модели роботает протокол DHCP?",
+    "answers": [
+      {
+        "value": "Клиент-серверная",
+        "correct": "true"
+      },
+      {
+        "value": "p2p",
+        "correct": "false"
+      },
+      {
+        "value": "Клиент-клиентская",
+        "correct": "false"
+      },
+      {
+        "value": "Сервер-клиент-сервер",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Чтобы найти DHCP-сервер, хост отправляет сообщение DHCP DISCOVER",
+    "answers": [
+      {
+        "value": "На IP-адрес DHCP-сервера",
+        "correct": "false"
+      },
+      {
+        "value": "Каждому хосту в сети",
+        "correct": "false"
+      },
+      {
+        "value": "На IP-адрес 67",
+        "correct": "false"
+      },
+      {
+        "value": "На широковещательный IP-адрес",
+        "correct": "true"
+      }
+    ]
+  },
+  {
+    "title": "Какой протокол транспортного уровня использует DHCP?",
+    "answers": [
+      {
+        "value": "UDP",
+        "correct": "true"
+      },
+      {
+        "value": "TCP",
+        "correct": "false"
+      },
+      {
+        "value": "ICMP",
+        "correct": "false"
+      },
+      {
+        "value": "GRE",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Хост впервые подлключился к сети, для получения IP адреса он обменяется следующими DHCP-сообщениями:",
+    "answers": [
+      {
+        "value": "DICSOVER, REQUEST, OFFER, ACK",
+        "correct": "false"
+      },
+      {
+        "value": "REQUEST, ACK",
+        "correct": "false"
+      },
+      {
+        "value": "DISCOVER, OFFER, REQUEST, ACK",
+        "correct": "true"
+      },
+      {
+        "value": "REQUEST, OFFER, DISCOVER, ACK",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "На каком порту работает DHCP-сервер?",
+    "answers": [
+      {
+        "value": "UDP/68",
+        "correct": "false"
+      },
+      {
+        "value": "TCP/67",
+        "correct": "false"
+      },
+      {
+        "value": "TCP/68",
+        "correct": "false"
+      },
+      {
+        "value": "UDP/67",
+        "correct": "true"
+      }
+    ]
+  },
+  {
+    "title": "Что сделает DHCP-клиент, если получит два сообщения DHCP OFFER от разных DHCP-серверов?",
+    "answers": [
+      {
+        "value": "Применит первое полученное",
+        "correct": "true"
+      },
+      {
+        "value": "Применит второе полученное",
+        "correct": "false"
+      },
+      {
+        "value": "Выбросит оба",
+        "correct": "false"
+      },
+      {
+        "value": "Повторно отправит сообщение DHCP REQUEST",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Если выбранный DHCP-сервер не может адекватно реагировать на сообщение DHCP REQUEST, сервер должен ответить сообщением",
+    "answers": [
+      {
+        "value": "DHCP DECLINE",
+        "correct": "false"
+      },
+      {
+        "value": "DHCP ACK",
+        "correct": "false"
+      },
+      {
+        "value": "DHCP RELEASE",
+        "correct": "false"
+      },
+      {
+        "value": "DHCP NAK",
+        "correct": "true"
+      }
+    ]
+  },
+  {
+    "title": "Когда DHCP-клиент отправляет сообщение DHCP DISCOVER, какой IP-адрес источника устанвливается?",
+    "answers": [
+      {
+        "value": "255.255.255.255",
+        "correct": "false"
+      },
+      {
+        "value": "Случайный IP-адрес",
+        "correct": "false"
+      },
+      {
+        "value": "IP-адрес, который был выдан в прошлый раз",
+        "correct": "false"
+      },
+      {
+        "value": "0.0.0.0",
+        "correct": "true"
+      }
+    ]
+  },
+  {
+    "title": "На какой IP-адрес отправляется сообщение DHCP REQUEST",
+    "answers": [
+      {
+        "value": "0.0.0.0",
+        "correct": "false"
+      },
+      {
+        "value": "На IP адрес DHCP-сервера",
+        "correct": "false"
+      },
+      {
+        "value": "224.0.0.2",
+        "correct": "false"
+      },
+      {
+        "value": "255.255.255.255",
+        "correct": "true"
+      }
+    ]
+  }
+]

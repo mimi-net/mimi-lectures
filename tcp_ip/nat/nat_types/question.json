@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Какой тип NAT подменяет порт источника?",
+    "answers": [
+      {
+        "value": "Full-cone NAT",
+        "correct": "false"
+      },
+      {
+        "value": "Address-restricted-cone NAT",
+        "correct": "false"
+      },
+      {
+        "value": "PAT",
+        "correct": "true"
+      },
+      {
+        "value": "Port-restricted-cone NAT",
+        "correct": "false"
+      }
+    ]
+  },
+  {
+    "title": "Можно ли получить доступ к внутреннему хосту, если он находится за Full-cone NAT?",
+    "answers": [
+      {
+        "value": "Нет.",
+        "correct": "false"
+      },
+      {
+        "value": "Да, при условии, что он отправил на удаленный хост пакет.",
+        "correct": "false"
+      },
+      {
+        "value": "Да, при условии, что он установил соединение с удаленным хостом.",
+        "correct": "false"
+      },
+      {
+        "value": "Да, всегда.",
+        "correct": "true"
+      }
+    ]
+  },
+  {
+    "title": "Хост, находящийся за Port-restricted-cone NAT, отправляет пакет на сервер. Порт источника - 8080, порт назначения - 9090. Какие пакеты от сервера дойдут до хоста обратно?",
+    "answers": [
+      {
+        "value": "Любые.",
+        "correct": "false"
+      },
+      {
+        "value": "С любого порта сервера на порт 9090 хоста.",
+        "correct": "false"
+      },
+      {
+        "value": "С порта 9090 на любой порт.",
+        "correct": "false"
+      },
+      {
+        "value": "С порта 9090 на порт 8080.",
+        "correct": "true"
+      }
+    ]
+  }
+]
