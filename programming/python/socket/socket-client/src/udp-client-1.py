@@ -13,7 +13,7 @@ data = '\x1b' + 47 * '\0'
 
 try:
     client.sendto( data.encode('utf-8'), (NTP_SERVER, PORT))
-    rdy = select.select([client], [], [], 0.5)
+    rdy = select.select([client], [], [], 0.9)
 
     if not rdy[0]:
         raise RuntimeError("socket recv broken")
