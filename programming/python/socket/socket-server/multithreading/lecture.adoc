@@ -1,0 +1,176 @@
+= Многопоточный TCP-сервер
+
+Однопоточный TCP-сервер хорош только для примера. В реальности, конечно, TCP-сервер всегда многопоточный и готов одновременно обслуживать несколько клиентов. Разберем несколько способов создания многопточного TCP-сервера.
+
+== Многопоточный TCP-сервер (fork)
+
+``Fork()`` - это системный вызов в UNIX-подобных ОС. После вызова ``fork()`` в системе создается идентичиный (полная копия процесса, включая состояния регистров процессора, открытых дескрипторов, памяти и фгалов) процесс (child/ребенок).
+
+NOTE: Более подробно про ``fork()`` - https://man7.org/linux/man-pages/man2/fork.2.html
+
+Общая идея работы многопоточного сервера через fork() такая:
+
+* Родительский процесс работает с серверным сокетом и ожидает подключения новых клиентов
+* При подключении клиента родительский процесс создает дочерний процесс
+* Дочерний процесс занимается обслуживанием клиента, а родительский, в это время, ожидает подключения нового клиента.
+
+Ниже представлен пример многопоточного TCP эхо-сервера с использованием fork().
+
+[source,python]
+----
+#!/usr/bin/python
+
+import socket
+import os
+import sys
+import signal
+
+HOST = 'localhost'
+PORT = 30001
+data_payload = 2048
+backlog = 5
+
+def sigchld_handler(*args):
+    pid, exit_code = os.wait()
+    print ("Child pid %d exiting with code %d" % (pid, exit_code//256))
+
+def client_handler(client):
+
+    while True:
+        data = client.recv(data_payload)
+
+        if not data:
+            break
+
+        print("Data: %s" % data)
+        s = client.send(data)
+        print("sent %s bytes back" % (s,))
+
+    # End connection
+    client.close()
+
+
+signal.signal(signal.SIGCHLD, sigchld_handler)
+
+# Create a TCP socket
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Enable reuse address/port
+sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+
+print("Starting up echo server on %s port %s" % (HOST, PORT))
+sock.bind((HOST, PORT))
+
+# Listen to clients, backlog argument specifies the max no. of queued connections
+sock.listen(backlog)
+
+while True:
+    print("Waiting to receive message from client")
+    client, address = sock.accept()
+    print("Client connected from %s" % (address,))
+
+    # Create new child
+    p = os.fork()
+
+    # We're child?
+    if not p:
+        client_handler(client)
+
+        # Exit from child
+        # Don't go to while True!
+        sys.exit(1)
+----
+
+Запустим этот TCP эхо-сервер и проверим, на сколько он справляется с задачей. После запуска сервера он сообщит о готовности к работе, как показано ниже.
+
+[source,console]
+----
+(venv) ScrumBook:src ilya2$ python tcp-server-1-fork.py
+Starting up echo server on localhost port 30001
+Waiting to receive message from client
+----
+
+Для проверки поочередно запустите утилиту ``nc localhost 30001`` из двух консолей. И попробуйте отправлять строки из первой и из второй консоли. У меня получается это сделать без проблем.
+
+[source,console]
+----
+ScrumBook:~ ilya2$ nc localhost 30001
+Hello TCP-server with fork
+Hello TCP-server with fork
+----
+
+А теперь давайте разберемся, как все это работает.
+
+NOTE: Считается, что вы уже понимаете основные моменты в работе TCP-сервера и разбор примера будет касаться только многопоточной реализации.
+
+[source,python]
+----
+def sigchld_handler(*args):
+    pid, exit_code = os.wait()
+    print ("Child pid %d exiting with code %d" % (pid, exit_code//256))
+----
+
+Функция ``sigchld_handler`` - обработчик сигнала SIGCHLD. Когда наша программа вызовет функцию fork(), то в системе появится идентичный процесс. Этот новый процесс называют дочерний, а тот кто его породил - родительский. Во время завершения работы дочерний процесс сообщает родительскому свой код возврата. Этот код возврата будет находиться в памяти ОС до тех пор, пока родительский процесс его не прочитает. Чтобы родительский процесс понял, что один из его детей завершил свою работу, система посылает родительскому процессу сигнал CHILD (SIGCHLD).
+
+Другими словами, при завершении дочернего процесса ОС отправляет родительскому процессу сигнал SIGCHLD и держит в памяти код возврата.
+
+По умолчанию, у сигнала SIGCHLD стоит пустой обработчик и родительский процесс  ничего не делает при его получении. Поэтому, мы его меняем обработчик сигнала SIGCHLD на свой.
+
+[source,python]
+----
+signal.signal(signal.SIGCHLD, sigchld_handler)
+----
+
+Наша функция ``sigchld_handler`` вызывает функцию ``os.wait``, которая вернет идентификатор завершившегося дочернего процесса (pid) и его код возврата (exit_code).
+
+[source,python]
+----
+def client_handler(client):
+
+    while True:
+        data = client.recv(data_payload)
+
+        if not data:
+            break
+
+        print("Data: %s" % data)
+        s = client.send(data)
+        print("sent %s bytes back" % (s,))
+
+    # End connection
+    client.close()
+----
+
+Функция ``client_handler`` будет заниматься обработкой клиента. В этой функции мы в вечном цикле ожидаем данных от клиента.
+
+[source,python]
+----
+data = client.recv(data_payload)
+----
+
+Если данные пришли, отправляем их клиенту обратно и снова ждем данные от клиента. Очень простой эхо-сервер.
+
+[source,python]
+----
+s = client.send(data)
+----
+
+Если клиент закроет соединение, то функция ``recv`` вернет пустое значение, мы выйдем из вечного цикла, закроем клиентское соединение со своей стороны и выйдем из функции.
+
+[source,python]
+----
+    # Create new child
+    p = os.fork()
+
+    # We're child?
+    if not p:
+        client_handler(client)
+
+        # Exit from child
+        # Don't go to while True!
+        sys.exit(1)
+----
+
+Основной код родительского процесса. Функцию ``fork`` создает дочерний процесс и начинает его выполнение со следующей команды после вызова ``fork``. Чтобы понять, где-кто, родителю функция ``fork`` вернет идентификатор (pid) ребенка, а ребенку 0.
+
+Поэтому, если мы родитель, то пропускаем всю работу с клиентским сокетом и возвращаемся в функцию ``accept``. Если мы ребенок, то вызываем функцию для работы с клиентом ``client_handler``. По её завершению завершаем и весь наш дочерний процесс (``sys.exit(1)``).
