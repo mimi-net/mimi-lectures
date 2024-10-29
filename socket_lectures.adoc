@@ -1,0 +1,31 @@
+= Программирование сокетов
+
+:leveloffset: +1
+
+:lecture_theme: programming/python/socket/socket-client/socket-tcp/
+:imagesdir: {lecture_theme}
+include::{lecture_theme}/lecture.adoc[]
+
+:lecture_theme: programming/python/socket/socket-client/socket-udp/
+:imagesdir: {lecture_theme}
+include::{lecture_theme}/lecture.adoc[]
+
+:lecture_theme: programming/python/socket/socket-client/socket-tcp/
+:imagesdir: {lecture_theme}
+include::{lecture_theme}/lecture.adoc[]
+
+:lecture_theme: programming/python/socket/socket-server/tcp_udp_server/
+:imagesdir: {lecture_theme}
+include::{lecture_theme}/lecture.adoc[]
+
+:lecture_theme: programming/python/socket/socket-server/multithreading/
+:imagesdir: {lecture_theme}
+include::{lecture_theme}/lecture.adoc[]
+
+:lecture_theme: programming/python/socket/socket-raw/raw/
+:imagesdir: {lecture_theme}
+include::{lecture_theme}/lecture.adoc[]
+
+:lecture_theme: programming/python/socket/socket-raw/icmp/
+:imagesdir: {lecture_theme}
+include::{lecture_theme}/lecture.adoc[]
